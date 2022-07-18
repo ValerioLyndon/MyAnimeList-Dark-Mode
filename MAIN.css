@@ -406,7 +406,6 @@ footer {
 }
 .page-common #footer-block .footer-link { border-color: var(--accent-dim) !important; }
 /* Second Div */
-.page-common #footer-block .footer-social-media:before { background: var(--accent-dim); }
 .page-common #footer-block .footer-social-media .icon-sns {
 	background-image: var(--img-socials-alt); /*/images/footer/footer-icon-sns.png?v=150421001*/
 }
