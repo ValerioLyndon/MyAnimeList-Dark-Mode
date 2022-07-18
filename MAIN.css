@@ -115,6 +115,7 @@ body:not(.ownlist) {
 .page-common #content {
 	background: var(--content);
 	box-shadow: var(--page-shadow);
+    border-color: var(--border);
 }
 .page-common .watch-state-icon.watched {
     color: var(--text-lnk-hov);
@@ -419,7 +420,6 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover { backg
 /* Text Headers */
 .page-common .h1, .page-common .h2, .page-common .h3, .page-common .h4, .page-common .h5, .page-common .h6,
 .page-common h1, .page-common h2, .page-common h3, .page-common h4, .page-common h5, .page-common h6 {
-	background-color: var(--header);
 	color: var(--text);
 }
 .page-common .badresult-text { color: var(--return-bad) }
@@ -434,7 +434,8 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover { backg
 .page-common .border_top,
 #dialog,
 .page-common .normal_header,
-.page-common .borderClass {
+.page-common .borderClass,
+.page-common .border_solid {
 	border-color: var(--border);
 }
 .page-common .bgbdrContainer {
@@ -565,9 +566,9 @@ body.notification .notification-header,
 .ownlist_style_theme .customize-content-left .header,
 .ownlist_style_theme .customize-content-left h2.theme-custom-header
 {
-	background: var(--content-dimmer);
 	margin: 0;
 	color: var(--text);
+    border-color: var(--border);
 }
 /*General*/
 .page-common .normal_header .floatRightHeader,
@@ -708,70 +709,32 @@ body.notification .notification-header .right-menu .item.disabled {
 \*------------------------------*/
 .profile .content-container .container-right h5,
 .ownlist_style_theme .customize-content-left h3.theme-custom-header {
-	border-bottom: 2px solid var(--border);
-	
+	border-color: var(--border);
 	color: var(--text);
 }
 .profile .content-container .container-right h5 a {
-	
 	color: var(--text-dim);
 	font: bold 0.9rem/13px var(--fontset-heading);
 }
-/* Patches - Profile */
-.profile .content-container .container-right h5 { margin-bottom: 7px !important; }
 /*------------------------------*\
   GENERIC @Sidebar-Headings
 \*------------------------------*/
-.page-common .user-profile h4 /*Profile*/
-{
-	background: var(--content-dimmer);
-	margin: 0;
-	
-	color: var(--text);
-}
 .page-common .user-profile h4 a /*Profile*/
 {
-	padding: 6px 10px;
-	margin: -6px -10px 0 10px;
-	
 	color: var(--text-dim);
-	font: bold 0.9rem/14px var(--fontset-heading) !important;
-	
 }
 .page-common .user-profile h4 a:hover /*Profile*/
 {
 	background: var(--content-dimmest);
 }
-/* Patches - Profile */
-.page-common .user-profile h4 { margin: 6px 0; }
-.user-profile h4.icon-rss:after {
-	
-	
-	width: 13px;
-	background-size: 13px 13px;
-	
-	float: left;
-}
 /* GENERIC @HOVERINFO */
 .page-common .hoverinfo {
 	background: var(--header);
-	border: 1px solid var(--header-border);
-	border-radius: 4px;
-	margin-left: -15px;
-	
+	border-color: var(--header-border);
 	color: var(--text-dim);
-	
-	
 }
 .page-common .hoverinfo:after {
-	left: -20px;
-	
-	width: 0;
-	height: 0;
-	border-width: 15px 10px;
 	border-color: var(--header-border) var(--header-border) transparent transparent;
-	
-	transform: skewY(15deg);
 }
 .page-common .hoverinfo.left.top:after {
 	left: -20px;
@@ -786,7 +749,6 @@ body.notification .notification-header .right-menu .item.disabled {
 	padding: 0 5px;
 	background: var(--content-dim);
 	border: 2px solid var(--content-dim);
-	
 	color: var(--text-dim);
 	font: 0.9rem/16px var(--fontset-basic);
 	
@@ -796,10 +758,7 @@ body.notification .notification-header .right-menu .item.disabled {
 .page-common .quickadd-content .btn-status-add:hover {
 	background: var(--border);
 	border-color: var(--border);
-	
 	color: var(--text-lnk-hov);
-	
-	
 }
 #myanimelist a.button_add.watching, #myanimelist a.button_edit.watching,
 #myanimelist a.button_add.reading, #myanimelist a.button_edit.reading,
@@ -845,79 +804,15 @@ body.notification .notification-header .right-menu .item.disabled {
 /*==============================*\
   !PAGE-TITLE
 \*==============================*/
-/* Left */
-#contentWrapper > div:first-of-type:not(#content) {
-	
-	height: 34px;
-	padding: 7px 0 7px 10px;
-	background: var(--content-dimmer) !important;
-	
-	z-index: 900;
-}
-#contentWrapper > div:first-of-type:not(#content):after {
-	
-	height: 2px;
-	background: linear-gradient(to right, var(--accent), var(--accent-dim) 25%, var(--accent-dim) 75%, var(--accent));
-}
-#contentWrapper > div:first-of-type:not(#content) .h1 {
-	max-width: 49%;
-	
+.page-common .h1 {
+    background: var(--header);
 	color: var(--text-heading) !important;
-	font-size: 1.1rem;
-	line-height: 18px !important;
-	text-overflow: ellipsis;
-	
-	z-index: 13;
-}
-#contentWrapper > div .h1 span.h1-title {
-	max-width: 49%;
-	line-height: 28px;
-	margin-top: -5px;
-}
-#contentWrapper > div:first-of-type:not(#content) .h1:only-child {
-	max-width: initial;
-
+    border-color: var(--border);
 }
 .page-common .h1 .title-english {
-	margin-left: 3px;
 	color: var(--text-dimmer);
-} .title-english::before {
-	content: '(';
-} .title-english::after {
-	content: ')';
-}
-/* Right */
-#contentWrapper > div:first-of-type:not(#content) .header-right {
-	
-	width: max-content;
-	max-width: 49%;
-	margin: 0 !important;
-	float: right;
-}
-#contentWrapper > div:first-of-type:not(#content) .header-right a,
-#contentWrapper > div:first-of-type:not(#content) a.header-right,
-#contentWrapper > div:first-of-type:not(#content) .h1 [style*="float: right"] a {
-	max-width: 100%;
-	height: 34px;
-	padding: 7px 10px !important;
-	margin: -7px 0 0 !important;
-	float: right;
-	
-	font: 700 1rem/18px var(--fontset-basic) !important;
-	text-overflow: ellipsis;
-	
-}
-#contentWrapper > div:first-of-type:not(#content) .header-right a:hover,
-#contentWrapper > div:first-of-type:not(#content) a.header-right:hover,
-#contentWrapper > div:first-of-type:not(#content) .h1 [style*="float: right"] a:hover {
-	background: var(--accent-dimmest);
-}
-#contentWrapper > div:first-of-type:not(#content) .h1 [style*="float: right"] a {
-	font: inherit;
 }
 .header-right #editdiv {
-	top: 34px;
-	
 	background: var(--header);
 	border: var(--header-border);
 }
@@ -1240,15 +1135,43 @@ body.news .menu-category .btn-category.selected {
     color: var(--text-heading) !important;
 }
 /* ===============================================
+!PROFILE
+=============================================== */
+.page-common .content-container .container-left {
+    border-color: var(--border);
+}
+.user-profile .user-status li {
+    background: transparent !important;
+}
+.user-profile .user-status.border-top {
+    border-color: var(--border);
+}
+/* Profile Action Button */
+.user-profile .user-function .icon-user-function:not(.disabled) {
+    background-color: var(--content-dim);
+    border-color: var(--border);
+}
+.user-profile .user-function .icon-user-function:not(.disabled) {
+    background-color: var(--content-dim);
+    border-color: var(--border);
+}
+.user-profile .user-function .icon-user-function:not(.disabled):hover {
+    background-color: var(--content-dimmer);
+}
+.user-profile .user-function .icon-user-function.disabled {
+    background-color: transparent !important;
+    border-color: var(--border);
+}
+/* ===============================================
 !FORUM
 =============================================== */
 /* Header Thing */
 .page-forum .forum-table-header td { padding: 10px 0; }
-/* Board Base */
-.page-forum [id^="topicRow"] [class^="forum_boardrow"] {
-	background: var(--content-dim);
-}
 /* Browser */
+.page-common table.forum-topics tr td {
+    background-color: transparent !important;
+    border-color: var(--border);
+}
 .page-common table.forum-topics tr td h4 {
 	padding: 0 0 3px 0;
 	margin: 0;
@@ -1259,6 +1182,7 @@ body.news .menu-category .btn-category.selected {
 .page-forum [class^="forum_boardrow"],
 .page-forum .sig
 {
+	background: transparent;
 	border-color: var(--border);
 }
 /* Icons */
@@ -1417,28 +1341,17 @@ BROWSE @Top-Lists
 #myanimelist [class$="-ranking-table"] .text {
 	color: var(--text);
 }
-#myanimelist [class$="-ranking-table"] .table-header td {
-	padding: 10px 0;
-	background: var(--border);
-	
-	font: 1.1rem/13px var(--fontset-heading);
-}
-#myanimelist [class$="-ranking-table"] .ranking-list td {
+#myanimelist [class$="-ranking-table"] td {
 	border-color: var(--border);
-	border-bottom: 2px solid var(--border);
 }
-/* Score */
-#myanimelist [class$="-ranking-table"] .score div:before, #myanimelist [class$="-ranking-table"] .your-score a:before {
-	content: "\f005";
-	
-	margin-right: 3px;
-	
-	color: #ecb428;
-	font: 1.5rem/1 "Font Awesome 6 Pro";
+#myanimelist [class$="-ranking-table"] .table-header td {
+	background: var(--border);
 }
-#myanimelist [class$="-ranking-table"] [class*="score"] div {
-	
-	font-size: 1.35rem;
+#myanimelist [class$="-ranking-table"] .ranking-list:nth-of-type(even) td {
+    background: transparent;
+}
+#myanimelist [class$="-ranking-table"] .ranking-list:nth-of-type(odd) td {
+    background: var(--content-dimmer);
 }
 /* ===============================================
 BROWSE @Seasonal
