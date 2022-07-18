@@ -21,29 +21,16 @@
  * CONTENT               : generic, re-used parts of code
  * Headings
  * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
  */
 /*==============================*\
   !RESOURCES
 \*==============================*/
 :root {
+    color-scheme: dark;
+    
 	/* Base Colours */
-	--page: hsl(30, 0%, 10%);
-	--content: hsl(30, 0%, 19%);
+	--page: hsl(0, 0%, 10%);
+	--content: hsl(0, 0%, 19%);
 	--content-rgb: 49, 48, 47;
 	--content-dim: hsl(30, 0%, 16%);
 	--content-dim-rgb: 42, 41, 40;
@@ -52,22 +39,21 @@
 	--border: var(--content-dimmer);
 	
 	--accent-bright: hsl(46, 63%, 46%); /*unused as of yet*/
-	--accent: hsl(46, 49%, 44%);
-	--accent-rgb: 166, 140, 57;
-	--accent-dim: hsl(46, 32%, 28%);
-	--accent-dimmer: hsl(46, 35%, 20%);
-	--accent-dimmest: hsl(46, 25%, 18%);
-	--notif: hsl(223, 49%, 60%);
-	--notif-rgb: 102, 130, 202;
+	--accent: hsl(216, 33%, 61%);
+	--accent-rgb: 121, 148, 188;
+	--accent-dim: hsl(216, 29%, 43%);
+	--accent-dimmer: hsl(216, 34%, 31%);
+	--accent-dimmest: hsl(215, 33%, 23%);
+	--notif: hsl(223, 49%, 60%)
+	--notif-rgb: 223, 100, 100;
 	
 	--text: hsl(0, 0%, 86%);
 	--text-dim: hsl(0, 0%, 74%);
 	--text-dimmer: hsl(0, 0%, 60%);
 	--text-dimmest: hsl(0, 0%, 50%);
 	--text-heading: hsl(0, 0%, 89%);
-	--text-lnk: hsl(0, 0%, 98%);
-	--text-lnk: hsl(45, 76%, 59%);
-	--text-lnk-hov: hsl(45, 100%, 60%);
+	--text-lnk: hsl(216, 40%, 71%);
+	--text-lnk-hov: hsl(223, 49%, 60%);
 	
 	--icon: hsl(0, 0%, 69%);
 	
@@ -76,7 +62,7 @@
 	--page-shadow: 3px 1.5px 5px hsla(0,0%,0%,25%);
 	
 	/* Header Colours */
-	--header: hsl(0, 0%, 13%);
+    --header: hsl(0, 0%, 16%);
 	--header-rgb: 34, 34, 34;
 	--header-dim: hsl(0, 0%, 25%);
 	--header-hov: hsl(0, 0%, 26%);
@@ -84,7 +70,8 @@
 	--header-border-alt: hsl(0, 0%, 3.3334%);
 	--header-text: hsl(0, 0%, 96%);
 	--header-text-dim: hsl(0, 0%, 86%);
-	--header-icon: hsl(0, 0%, 89%);
+	--header-icon: hsl(222, 68%, 36%);
+	
 	
 	/*	Specific Colours */
 	--quotebox-bg: #2c2b2a;
@@ -95,47 +82,20 @@
 	--codebox-text: #99b6c2;
 	
 	/* Status Colours */
-/* 	--allanime: #ff00de; */
+	/* default:
 	--watching: #c28639;
 	--completed: #364e88;
 	--onhold: #ccb050;
 	--dropped: #c84e50;
-	--planned: #454545;
-	
-	/* Timings */
-/* 	REMOVE THESE DEFUNCT ONES */
-	--time-long: 0.3s;
-	--time-medium: 0.24s;
-	--time-short: 0.12s;
-	
-	--time-img: 0.24s;
-	--time-btn-large: 0.2s;
-	--time-btn-small: 0.12s;
-	
-	--time-function-bounce: cubic-bezier(0.5, 0, 0.25, 1.2);
-}
-/* BLUE THEME */
-:root {
-    --header: #2a2a2a;
-	--header-icon: #1d439b;
-	--page: #2a2a2a;
-	--content: #303030;
-	
-	--accent: #7994bc;
-	--accent-dim: #4e678d;
-	--accent-dimmer: #344969;
-	--accent-dimmest: #28384f;
-	--notif: #df6464;
-	--notif-0: #df646400;
-	
-	--text-lnk: #99b0d3;
-	--text-lnk-hov:hsl(223, 49%, 60%);
+	--planned: #454545;*/
 	
 	--watching: #bbbbdd;
 	--completed: #9999bb;
 	--onhold: #777799;
 	--dropped: #555577;
 	--planned: #444455;
+
+	/* Sizes */
 	--ptwidth: 200px;
 }
 /*==============================*\
@@ -238,9 +198,6 @@ body.news .news-container .tags, body.news .news-container .news-info-block, bod
 .page-common .header-notification-item {
 	border-bottom: 1px solid var(--header-border) !important;
 }
-/* .page-common .header-notification-item .inner:not(.is-read):before {
-	background: linear-gradient(to right, rgba(var(--notif-rgb), 0.3), rgba(var(--notif-rgb), 0));
-} */
 .page-common .header-notification-item .inner:not(.is-read) {
 	border-left: 4px solid var(--notif);
 	color: var(--text-dim);
@@ -336,7 +293,6 @@ HEADER / NAV
 .page-common #nav > li > ul {
 	border-color: var(--header-border);
 }
-}
 
 .page-common #nav > li > ul > li > a {
 	background: var(--header) !important;
@@ -406,9 +362,6 @@ footer {
 }
 .page-common #footer-block .footer-link { border-color: var(--accent-dim) !important; }
 /* Second Div */
-.page-common #footer-block .footer-social-media .icon-sns {
-	background-image: var(--img-socials-alt); /*/images/footer/footer-icon-sns.png?v=150421001*/
-}
 .page-common #footer-block .footer-recommended .icon-recommended {
 	color: var(--text-heading);
 }
@@ -425,7 +378,6 @@ footer {
 /* Scrollbar - Firefox */
 * {
   scrollbar-color: var(--accent-dimmer) var(--content-dimmer);
-/*   scrollbar-width: thin; */
 }
 /* Scrollbar - Chrome/Webkit */
 *::-webkit-scrollbar {
@@ -452,17 +404,6 @@ html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
 	background: var(--accent-dim);
 }
 html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover { background: var(--accent); }
-/* Divs */
-/* .page-common .pt24 { padding-top: 20px !important; }
-.page-common .pb24 { padding-bottom: 20px !important; }
-.page-common .mt8 { margin-top: 7px !important; }
-.page-common .mt12 { margin-top: 10px !important; }
-.page-common .mt24 { margin-top: 20px !important; }
-.page-common .mr8 { margin-right: 7px !important; }
-.page-common .mb8 { margin-bottom: 7px !important; }
-.page-common .mb12 { margin-bottom: 10px !important; }
-.page-common .mb24 { margin-bottom: 20px !important; }
-.page-common .ml8 { margin-left: 7px !important; } */
 /* Text Colours */
 .page-common .lightLink, .page-common .lightLink:link, .page-common .lightLink:visited, .page-common .lightLink:active,
 .page-common .dark_text, .page-common .dark_text:hover, .page-common .dark_text:visited {
@@ -522,9 +463,6 @@ input:disabled, textarea:disabled {
 	
 	resize: both;
 }
-/* .page-common .textarea {
-	background: var(--content-dim) var(--img-icon-resize) no-repeat right bottom / 12px 12px !important;
-} */
 /* Buttons - Inputs */
 #myanimelist .inputButton, .page-common .btn-form-submit,
 .page-common.ownlist_style_theme .inputButton {
@@ -563,7 +501,6 @@ input:disabled, textarea:disabled {
 .page-support #myanimelist #content p, .page-support #myanimelist #content li, .page-support #myanimelist #content h3, .page-support #myanimelist #content h4 {
     color: var(--header-text)
 }
-/* #myanimelist .inputButton[value*="Delete"] { background-color: var(--return-bad); } */
 /* Buttons - Nav */
 .page-common .pagination {
 	background: var(--content-dim);
@@ -630,7 +567,6 @@ body.notification .notification-header,
 {
 	background: var(--content-dimmer);
 	margin: 0;
-	
 	color: var(--text);
 }
 /*General*/
@@ -662,7 +598,6 @@ body.index .widget .widget-header > span a,
 body.notification .notification-header .right-menu .item
 {
 	margin: -10px -10px 0 10px;
-	
 	color: var(--text-dim);
 	font: bold 0.9rem/13px var(--fontset-heading);
 	
@@ -784,8 +719,6 @@ body.notification .notification-header .right-menu .item.disabled {
 }
 /* Patches - Profile */
 .profile .content-container .container-right h5 { margin-bottom: 7px !important; }
-/* Patches - Ownlist-style */
-.ownlist_style_theme .customize-content-left h3.theme-custom-header.js-theme-custom-header:active {  }
 /*------------------------------*\
   GENERIC @Sidebar-Headings
 \*------------------------------*/
@@ -820,13 +753,6 @@ body.notification .notification-header .right-menu .item.disabled {
 	float: left;
 }
 /* GENERIC @HOVERINFO */
-.page-common .hoverinfo[style*="none"] {
-	
-	
-}
-.page-common .hoverinfo:hover {
-	
-}
 .page-common .hoverinfo {
 	background: var(--header);
 	border: 1px solid var(--header-border);
@@ -836,8 +762,6 @@ body.notification .notification-header .right-menu .item.disabled {
 	color: var(--text-dim);
 	
 	
-}
-.page-common .hoverinfo .hoverinfo-contaniner {
 }
 .page-common .hoverinfo:after {
 	left: -20px;
@@ -897,8 +821,6 @@ body.notification .notification-header .right-menu .item.disabled {
 #myanimelist a.Lightbox_AddEdit.btn-addEdit-large.plantoread
 /* Planned */ { border-color: var(--planned) }
 /* Buttons - Add/Edit */
-#myanimelist a.button_add:not(.Lightbox_AddEdit), #myanimelist a.button_edit:not(.Lightbox_AddEdit) {
-}
 .page-common a.button_add.button_add:hover, .page-common a.button_add.button_edit:hover, .page-common a.button_edit.button_add:hover, .page-common a.button_edit.button_edit:hover {
 	color: var(--text);
 }
@@ -923,28 +845,6 @@ body.notification .notification-header .right-menu .item.disabled {
 /*==============================*\
   !PAGE-TITLE
 \*==============================*/
-/* .page-common .wrapper:after {
-	
-	
-	height: 200px;
-	background: url(https://i.imgur.com/HheYL00.jpg) no-repeat center / cover fixed;
-	background: url(https://i.imgur.com/4KgeXwW.png) no-repeat center / cover;
-	
-	flex: 1 1 100%;
-}
-.page-common #contentWrapper {
-	margin-top: 200px;
-}
-.page-common .wrapper:before {
-	top: 69px;
-	top: 254px;
-	
-	height: 32px;
-	background: var(--border);
-	border-bottom: 2px solid var(--accent);
-	
-	z-index: 850;
-} */
 /* Left */
 #contentWrapper > div:first-of-type:not(#content) {
 	
@@ -977,8 +877,6 @@ body.notification .notification-header .right-menu .item.disabled {
 #contentWrapper > div:first-of-type:not(#content) .h1:only-child {
 	max-width: initial;
 
-}
-#contentWrapper > div .h1 span.h1-title br {
 }
 .page-common .h1 .title-english {
 	margin-left: 3px;
@@ -1014,22 +912,9 @@ body.notification .notification-header .right-menu .item.disabled {
 #contentWrapper > div:first-of-type:not(#content) .h1 [style*="float: right"] a:hover {
 	background: var(--accent-dimmest);
 }
-#contentWrapper > div:first-of-type:not(#content) .header-right.divider {  }
 #contentWrapper > div:first-of-type:not(#content) .h1 [style*="float: right"] a {
 	font: inherit;
 }
-/* .page-common .header-right i {
-} */
-/* .page-common .header-right:before {
-	content: "\f013 ";
-	
-	font: 1.1rem/16.5px Font Awesome 6 Pro;
-	vertical-align: top;
-	
-}
-.page-common .header-right:before {
-	margin-right: 5px;
-} */
 .header-right #editdiv {
 	top: 34px;
 	
@@ -1037,8 +922,6 @@ body.notification .notification-header .right-menu .item.disabled {
 	border: var(--header-border);
 }
 /* User Banners (moderators, etc) */
-.profile-team-title {
-}
 .icon-team-title {
 	padding: 3px 5px !important;
 	background-color: var(--content-dim);
@@ -1050,22 +933,6 @@ body.notification .notification-header .right-menu .item.disabled {
 	vertical-align: top;
 	
 }
-/* .icon-team-title.site_administrator {  }
-.icon-team-title.site_administrator:hover {  }
-.icon-team-title.database_administrator {  }
-.icon-team-title.database_administrator:hover {  }
-.icon-team-title.anime_db_moderator {  }
-.icon-team-title.anime_db_moderator:hover {  }
-.icon-team-title.manga_db_moderator {  }
-.icon-team-title.manga_db_moderator:hover {  }
-.icon-team-title.forum_moderator {  }
-.icon-team-title.forum_moderator:hover {  }
-.icon-team-title.review_recommendation_moderator {  }
-.icon-team-title.review_recommendation_moderator:hover {  }
-.icon-team-title.social_media_moderator {  }
-.icon-team-title.social_media_moderator:hover {  }
-.icon-team-title.retired_moderator {  }
-.icon-team-title.retired_moderator:hover {  } */
 /* GENERIC @Breadcrumb */
 .page-common .breadcrumb {
 	top: 34px;
@@ -1073,9 +940,6 @@ body.notification .notification-header .right-menu .item.disabled {
 	padding: 1px 0;
 	background: linear-gradient(to right, var(--border), var(--content-dim));
 	margin: 0 !important;
-	
-}
-.page-common .breadcrumb ~ .breadcrumb {
 	
 }
 .page-common .breadcrumb div {
@@ -1113,9 +977,6 @@ body.notification .notification-header .right-menu .item.disabled {
 	content: "Club Forum";
 	
 }
-/* .page-common .breadcrumb div a[href="https://myanimelist.net/"] { display: none !important; } */
-.page-common .breadcrumb div a[href="https://myanimelist.net/"] {
-}
 .page-common .breadcrumb div a[href="https://myanimelist.net/"]:before {
 	content: "Home";
 	
@@ -1132,7 +993,6 @@ body.notification .notification-header .right-menu .item.disabled {
 .page-common .breadcrumb div:nth-child(10) { z-index: 3; }
 .page-common .breadcrumb div:nth-child(11) { z-index: 2; }
 .page-common .breadcrumb div:nth-child(12) { z-index: 1; }
-/* .page-common .breadcrumb ~ .breadcrumb div { z-index: 0; } */
 /* Patches - News */
 body.news .news-breadcrumbs {
 	width: initial;
@@ -1187,10 +1047,8 @@ body.news .news-breadcrumbs {
 	padding: 0 7px;
 	background: var(--content-dim) !important;
 	border: 1px solid var(--border);
-	
 	color: var(--text-dim);
 	line-height: 18px;
-	
 }
 #myanimelist .spoiler .button:hover, #myanimelist .quotetext .button.expand_quote:hover { border-color: var(--accent-dim) !important; }
 #myanimelist .spoiler > .spoiler_content[style*="ck"] > .button {
@@ -1204,9 +1062,7 @@ body.news .news-breadcrumbs {
 }
 #myanimelist .spoiler > .spoiler_content:before {
 	left: -5px;
-	
 	width: 2px;
-/* 	background: var(--accent-dim); TEMP */
 	background: linear-gradient(to bottom, transparent, var(--accent-dim) 15px, var(--accent-dim) calc(100% - 15px), transparent);
 }
 #myanimelist .quotetext {
@@ -1223,19 +1079,16 @@ body.news .news-breadcrumbs {
 }
 #myanimelist .codetext {
 	max-width: 100%;
-   background: var(--codebox-bg);
+    background: var(--codebox-bg);
 	border: 1px solid var(--border);
 	box-shadow: inset 0 0 4px rgba(0,0,0,.15);
 	margin: 0;
-	
-	
-   color: var(--codebox-text);
+    color: var(--codebox-text);
 }
 #myanimelist .codetext pre {
 	max-width: 100%;
 	overflow-x: auto;
 	overflow-y: visible;
-	
 	font: 11px/15px var(--fontset-monospace);
 }
 /*------------------------------*\
@@ -1251,7 +1104,6 @@ body.news .news-breadcrumbs {
 #quickadd input {
 	background-color: var(--content-dim);
 	border-color: var(--border);
-	
 	color: var(--text);
 
 }
@@ -1290,8 +1142,6 @@ body.news .news-breadcrumbs {
 	background: var(--content-dim);
 	border-color: var(--border);
 }
-#advancedSearchResultList .list {
-}
 #advancedSearchResultList .list.focus { background: var(--border); }
 #advancedSearchResultList .list .image { border: 2px solid var(--border); }
 #advancedSearchResultList .list .name { color: var(--text) !important; }
@@ -1316,8 +1166,6 @@ body.news .news-breadcrumbs {
 #advancedSearchResultList .list.list-bottom a { color: var(--header-text); }
 #advancedSearchResultList .list.list-bottom.focus a { color: var(--header); }
 /* Advanced Search */
-#advancedSearch {
-}
 #advancedSearch .mb24:last-of-type {
 	padding-bottom: 20px !important;
 	margin-bottom: 0px !important;
@@ -1349,8 +1197,6 @@ body.news .menu-category .btn-category.selected {
 }
 .di-ib.tags *, .tag-cloud * {
 	background-color: transparent !important;
-}
-#myanimelist .news-list .tags .tags-inner {
 }
 #myanimelist .news-list .tags .tags-inner-attributes {
 	border-color: var(--border);
@@ -1403,12 +1249,6 @@ body.news .menu-category .btn-category.selected {
 	background: var(--content-dim);
 }
 /* Browser */
-.page-common table.forum-topics tr td {
-/* 	padding: 7px; */
-}
-.page-common table.forum-topics tr td.watch-state {
-/* 	padding: 3px 0; */
-}
 .page-common table.forum-topics tr td h4 {
 	padding: 0 0 3px 0;
 	margin: 0;
@@ -1435,9 +1275,6 @@ body.news .menu-category .btn-category.selected {
 } .js-toggle-watching-topic-button img[title*="re wa"] {
 	background-color: var(--notif);
 	border-color: var(--notif);
-} /*.js-toggle-watching-topic-button img[title*="re not wa"] {
-} */
-.js-ignore-topic-button img {
 }
 .js-ignore-topic-button {
 	width: 12px;
@@ -1448,8 +1285,6 @@ body.news .menu-category .btn-category.selected {
 	line-height: 12px;
 }
 .js-ignore-topic-button:before {
-	
-	
 	width: 8px;
 	height: 2px;
 	background: var(--text-dim);
@@ -1470,8 +1305,6 @@ body.notification #myanimelist #content .left-column {
 }
 body.notification .notificaiton-category-nav {
 	min-height: auto;
-}
-body.notification .notificaiton-category-nav li {
 }
 body.notification .notificaiton-category-nav a {
 	color: var(--text-heading);
@@ -1549,9 +1382,6 @@ body.notification .notification-item-layout .fa-check:hover { background: var(--
 /*https://myanimelist.net/manga.php*/
 .anime-manga-search .normal_header { margin-top: 20px; }
 /* Browse Page */
-.anime-manga-search .genre-link {
-/* 	 */
-}
 .anime-manga-search .genre-link .genre-list-col {
 	display: inline;
 }
@@ -1575,8 +1405,6 @@ body.notification .notification-item-layout .fa-check:hover { background: var(--
 .anime-manga-search .genre-link .genre-list .genre-name-link:hover {
 	border-color: var(--accent);
 }
-.anime-manga-search .genre-link .genre-list .genre-name-link:after {
-}
 /* ===============================================
 BROWSE @Top-Lists
 =============================================== */
@@ -1599,7 +1427,6 @@ BROWSE @Top-Lists
 	border-color: var(--border);
 	border-bottom: 2px solid var(--border);
 }
-/* #myanimelist [class$="-ranking-table"] .ranking-list:nth-of-type(even) td { background: var(--content-dim); } */
 /* Score */
 #myanimelist [class$="-ranking-table"] .score div:before, #myanimelist [class$="-ranking-table"] .your-score a:before {
 	content: "\f005";
@@ -1612,11 +1439,6 @@ BROWSE @Top-Lists
 #myanimelist [class$="-ranking-table"] [class*="score"] div {
 	
 	font-size: 1.35rem;
-}
-#myanimelist [class$="-ranking-table"] .your-score a {
-}
-#myanimelist [class$="-ranking-table"] .your-score span {
-	
 }
 /* ===============================================
 BROWSE @Seasonal
@@ -1728,7 +1550,6 @@ BROWSE @Clubs
 =============================================== */
 #fancybox-overlay {
 	background: black !important;
-	
 }
 #fancybox-wrap {
 	left: 50% !important;
@@ -1740,16 +1561,12 @@ BROWSE @Clubs
 	transform: translate(-50%,-50%);
 }
 #fancybox-outer {
-	
-	
 	min-width: 500px;
 	min-height: 350px;
 	background: var(--border);
 }
 #fancybox-inner {
-	
 	height: 100% !important;
-	
 	color: var(--text);
 }
 #fancybox-inner div {
@@ -1761,13 +1578,10 @@ BROWSE @Clubs
 }
 /* MODALS */
 .root * { border-color: var(--border) !important; }
-.root .modal-content { transition: all var(--time-medium) ease; }
 .root .modal-mask { background-color: rgba(0,0,0,0.7) }
 .root .modal-content {
 	background: var(--header);
 	border-top: 2px solid var(--border);
-}
-.root .modal-wrapper {
 }
 .root .modal-container {
 	border-color: var(--accent) !important;
@@ -1777,7 +1591,6 @@ BROWSE @Clubs
 .root button {
 	background: var(--accent);
 	border-radius: 12px;
-	
 	color: var(--border);
 	
 }
