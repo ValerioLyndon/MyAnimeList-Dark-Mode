@@ -1353,6 +1353,12 @@ BROWSE @Top-Lists
 #myanimelist [class$="-ranking-table"] .ranking-list:nth-of-type(odd) td {
     background: var(--content-dimmer);
 }
+
+/* Manga store text */
+#myanimelist [class$="-ranking-table"] .title .link {
+	color: var(--text-dimmer);
+}
+
 /* ===============================================
 BROWSE @Seasonal
 =============================================== */
@@ -1360,69 +1366,56 @@ BROWSE @Seasonal
 .navi-seasonal {
 	width: 1040px;
 	background: var(--content);
-	
+}
+.navi-seasonal .horiznav-nav-seasonal {
+    border-color: var(--border);
+}
+.season .seasonal-sort-order-block {
+    background: var(--content-dim);
+    border-color: var(--border);
 }
 .navi-seasonal.fixed {
 	background: var(--border);
 }
 .navi-seasonal.fixed:after {
-	bottom: -15px;
-		
-	height: 15px;
 	background: linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0, 0));
-	
 }
 .navi-seasonal .horiznav_nav ul li a,
 .navi-seasonal .horiznav_nav ul li a.navtab,
 .navi-seasonal .horiznav-nav-seasonal .btn-seasonal .btn-type
 {
-	background: var(--content-dim);
+	background: transparent;
+    border-color: var(--border);
 	color: var(--text-dim);
 }
 /* Items */
 .seasonal-anime-list .seasonal-anime {
-	width: calc(33.3334% - 15px - 1.6667px);
 	border-color: var(--border);
-	margin-right: 5px;
-	
 }
 .seasonal-anime-list .seasonal-anime .prodsrc {
 	background: var(--border);
 }
-.seasonal-anime-list .seasonal-anime .genres {
+.seasonal-anime-list .seasonal-anime .genres,
+.seasonal-anime-list .seasonal-anime .properties .property {
 	background: var(--content-dim);
+	border-color: var(--border);
+}
+.seasonal-anime-list .seasonal-anime .properties .property:nth-child(even) {
+	background: transparent;
 }
 .seasonal-anime-list .seasonal-anime .genres .genre {
 	background: var(--content-dim);
+	border-color: var(--border);
 }
 .seasonal-anime-list .seasonal-anime .genres .genre a {
 	color: var(--text-dimmer);
 }
-.seasonal-anime-list .seasonal-anime .synopsis {
-	width: calc(100% - 167px) !important;
-}
 .seasonal-anime-list .seasonal-anime .information {
 	background: var(--border);
-	
+	border-color: var(--border);
 }
 .seasonal-anime-list .seasonal-anime .information > div {
-	
 	color: var(--text-dimmer) !important;
-}
-.seasonal-anime-list .seasonal-anime .information .scormem .score:after {
-	content: "☆";
-	left: -1px;
-	
-	
-	line-height: 11px;
-	font-size: 14px;
-}
-.seasonal-anime-list .seasonal-anime .information .scormem .member:after {
-	content: "M";
-	
-	
-	line-height: 14px;
-	font-size: 11px;
 }
 /* ===============================================
 BROWSE @Clubs
