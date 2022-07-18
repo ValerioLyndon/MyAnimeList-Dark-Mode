@@ -26,8 +26,8 @@
   !RESOURCES
 \*==============================*/
 :root {
-    color-scheme: dark;
-    
+	color-scheme: dark;
+	
 	/* Base Colours */
 	--page: hsl(0, 0%, 10%);
 	--content: hsl(0, 0%, 19%);
@@ -62,7 +62,7 @@
 	--page-shadow: 3px 1.5px 5px hsla(0,0%,0%,25%);
 	
 	/* Header Colours */
-    --header: hsl(0, 0%, 16%);
+	--header: hsl(0, 0%, 16%);
 	--header-rgb: 34, 34, 34;
 	--header-dim: hsl(0, 0%, 25%);
 	--header-hov: hsl(0, 0%, 26%);
@@ -94,16 +94,11 @@
 	--onhold: #777799;
 	--dropped: #555577;
 	--planned: #444455;
-
-	/* Sizes */
-	--ptwidth: 200px;
 }
 /*==============================*\
   !PAGE-BASE
 \*==============================*/
-.user-profile .user-image img {
-	width: var(--ptwidth);
-}
+
 body:not(.ownlist) {
 	background: var(--page) !important;
 	color: var(--text);
@@ -115,16 +110,16 @@ body:not(.ownlist) {
 .page-common #content {
 	background: var(--content);
 	box-shadow: var(--page-shadow);
-    border-color: var(--border);
+	border-color: var(--border);
 }
 .page-common .watch-state-icon.watched {
-    color: var(--text-lnk-hov);
+	color: var(--text-lnk-hov);
 }
 body.news h2, .page-common .mb16, .page-common .pt16, body.news .news-container .title, body.news .news-container .summary, .featured-article-body p, .news-list .comment-list .text, .news-list .news-unit .text {
-    color:#FFF !important;
+	color:#FFF !important;
 }
 body.news .news-container .tags, body.news .news-container .news-info-block, body.news .news-container .information {
-   	background: var(--content) !important;
+	background: var(--content) !important;
 	box-shadow: var(--page-shadow) !important; 
 }
 /*==============================*\
@@ -134,7 +129,7 @@ body.news .news-container .tags, body.news .news-container .news-info-block, bod
 	background: var(--header) !important;
 }
 #menu:before {
-	border-bottom: 1px solid var(--header-border);
+	border-color: var(--header-border);
 	box-shadow: var(--page-shadow);
 }
 .page-common #menu ,.page-common #menu:hover{
@@ -143,7 +138,7 @@ body.news .news-container .tags, body.news .news-container .news-info-block, bod
 /* ACCOUNT */
 .page-common #header-menu {
 	box-shadow: var(--header-border);
-    border-bottom: 1px solid var(--header-border);
+	border-color: var(--header-border);
 }
 /* ACCOUNT ICONS */
 .page-common #header-menu .header-menu-unit:not(.header-profile) > a,
@@ -157,7 +152,7 @@ body.news .news-container .tags, body.news .news-container .news-info-block, bod
 /* ACCOUNT LIST DROPDOWN */
 .page-common .header-list .header-list-dropdown {
 	background: var(--header);
-	border: 1px solid var(--header-border);
+	border-color: var(--header-border);
 }
 .page-common .header-list .header-list-dropdown ul li a {
 	color: var(--header-text-dim);
@@ -197,10 +192,10 @@ body.news .news-container .tags, body.news .news-container .news-info-block, bod
 	background: var(--header-hov) !important;
 }
 .page-common .header-notification-item {
-	border-bottom: 1px solid var(--header-border) !important;
+	border-color: var(--header-border) !important;
 }
 .page-common .header-notification-item .inner:not(.is-read) {
-	border-left: 4px solid var(--notif);
+	border-color: var(--notif);
 	color: var(--text-dim);
 }
 .page-common .header-notification-item .inner.is-read { color: var(--text-dimmest); }
@@ -229,7 +224,7 @@ body.news .news-container .tags, body.news .news-container .news-info-block, bod
 /* Bottom Bar */
 .page-common .header-notification-view-all a {
 	background: var(--header);
-	border-top: 1px solid var(--header-border);
+	border-color: var(--header-border);
 }
 .page-common .header-notification-view-all a:hover {
 	background: var(--header-hov);
@@ -327,7 +322,7 @@ HEADER / NAV / SEARCH
 	border-color: var(--header-border);
 }
 #topSearchResultList .list.focus { background: var(--header-hov); }
-#topSearchResultList .list .image { border: 2px solid var(--header-border); }
+#topSearchResultList .list .image { border-color: var(--header-border); }
 #topSearchResultList .list .name { color: var(--text-dim) !important; }
 #topSearchResultList .list .media-type { color: var(--text-dimmest) !important; }
 #topSearchResultList .list .extra-info { color: var(--text-dimmer) !important; }
@@ -426,7 +421,7 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover { backg
 /* Borders & Containers */
 :focus { outline-color: var(--accent); }
 .wrapper > div > div *:not(img) {
-    border-color: var(--border);
+	border-color: var(--border);
 }
 .page-common .bgColor1 { background: var(--content-dim); }
 .page-common .bgColor2 { background: var(--content-dim); }
@@ -444,7 +439,7 @@ html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover { backg
 /* Images */
 .page-common div.picSurround {
 	background: var(--border);
-	border: 2px solid var(--border);
+	border-color: var(--border);
 }
 .icon-watch:before, .icon-watch-pv:before {
 	color: var(--icon);
@@ -467,25 +462,17 @@ input:disabled, textarea:disabled {
 /* Buttons - Inputs */
 #myanimelist .inputButton, .page-common .btn-form-submit,
 .page-common.ownlist_style_theme .inputButton {
-	height: 24px;
-	padding: 4px 10px;
 	background-color: var(--accent);
-	
 	color: var(--border);
-	font: bold 1rem/16px var(--fontset-basic);
 	
 }
 #myanimelist .inputButton:not(:disabled):hover, .page-common .btn-form-submit:not(:disabled):hover {
 	background: var(--accent-dim);
-	
 	color: var(--text-lnk-hov);
 }
-.inputButton ~ .inputButton { margin-left: 5px; }
 #myanimelist .inputButton:disabled {
 	background-color: var(--content-dimmer);
 	color: var(--text-dimmest);
-	
-	
 }
 /* Patches - Ownlist-style */
 .page-common .inputButton.btn-middle:active {
@@ -494,35 +481,23 @@ input:disabled, textarea:disabled {
 }
 .page-common.ownlist_style_theme .inputButton:hover { color: var(--text-lnk-hov) !important; }
 /* Patches -  page */
-.page-common .btn-form-submit.js-btn-support-form {
-	height: 32px;
-	padding: 8px 30px !important;
-	
-}
 .page-support #myanimelist #content p, .page-support #myanimelist #content li, .page-support #myanimelist #content h3, .page-support #myanimelist #content h4 {
-    color: var(--header-text)
+	color: var(--header-text)
 }
 /* Buttons - Nav */
 .page-common .pagination {
 	background: var(--content-dim);
-	border-radius: 12px;
 }
 .page-common .pagination .link {
-	height: 18px;
-	margin: 0;
-	
 	color: var(--text);
-	line-height: 18px;
-	
 }
 .page-common .pagination .link:hover { background: var(--content-dimmer); }
-.page-common .pagination .link + .link { border-left: 2px solid var(--border); }
+.page-common .pagination .link + .link { border-color: var(--border); }
 .page-common .pagination .link.current { background: var(--accent-dim) }
 .page-common .pagination .link.current:hover { background: var(--accent) }
 /* Unknown Anime Images */
 img[src*="qm_50.gif"] {
-
-	background: var(--border) var(--img-missing) no-repeat center / cover !important;
+	background-color: var(--border) !important;
 }
 /* ========== */
 ul.ignored-user-list li:nth-child(2n) {
@@ -545,7 +520,7 @@ ul.ignored-user-list li:nth-child(2n) {
 /* Random Pages that should really f****** use simple site-wide classes but instead use singular CSS rules for no HECKing reason  */
 h1.term-header1,
 h1[data="EULA"], h1[data="TermsOfUse"], .mal-address {
-	border-bottom: 2px solid var(--border);
+	border-color: var(--border);
 }
 /* GENERIC @HEADINGS */
 /*General*/
@@ -566,9 +541,8 @@ body.notification .notification-header,
 .ownlist_style_theme .customize-content-left .header,
 .ownlist_style_theme .customize-content-left h2.theme-custom-header
 {
-	margin: 0;
 	color: var(--text);
-    border-color: var(--border);
+	border-color: var(--border);
 }
 /*General*/
 .page-common .normal_header .floatRightHeader,
@@ -579,9 +553,7 @@ body.index .widget .widget-header > span,
 /*Notifications*/
 body.notification .notification-header .right-menu
 {
-	
 	color: var(--text);
-	font: normal 0.9rem/13px var(--fontset-heading);
 }
 /*General*/
 .page-common .normal_header a,
@@ -598,9 +570,7 @@ body.index .widget .widget-header > span a,
 /*Notifications*/
 body.notification .notification-header .right-menu .item
 {
-	margin: -10px -10px 0 10px;
 	color: var(--text-dim);
-	font: bold 0.9rem/13px var(--fontset-heading);
 	
 }
 /*General*/
@@ -621,56 +591,24 @@ body.index .widget .widget-header > span a:hover,
 /* - - - - - - - - - - - - - - -*\
   Patches
 \*- - - - - - - - - - - - - - - */
-/* Patches - General */
-.page-common .normal_header.pt24 { padding-top: 10px !important; }
-.floatRightHeader a:only-of-type { margin-left: 0 !important; }
-.normal_header small { font-size: 0.9rem; }
-.profile .content-container .user-comments h2 .floatRightHeader,
-.normal_header.club-information-header ~ .normal_header .floatRightHeader { font-size: 0; }
-/* Patches - Panel */
-body.index .widget .widget-header > span a {
-	
-	font-weight: bold !important;
-}
 /* Patches - Advertising */
-.page-advertising #ad_menu {
-    margin-left: 16.5%;
-}
 .page-advertising .ad-contents .ad-text-head3 {
-    color: var(--header-text);
+	color: var(--header-text);
 }
-    
+	
 /* Patches - Forum */
-.forum-table-header .normal_header a {
-	margin: 0;
-}
 .forum-table-header .normal_header > a {
 	color: var(--text);
 }
-.forum-table-header .normal_header > a:after {
-	content: " \f0dc";
-}
-/* Patches - Clubs */
-.normal_header.club-information-header,
-.normal_header.club-information-header ~ .normal_header,
-.normal_header.club-information-header ~ * .normal_header {
-	margin: 10px 0;
-}
-.normal_header.club-information-header ~ .normal_header .floatRightHeader a { font-weight: bold !important; }
 /* Patches - Notifications */
 body.notification .notification-section .notification-header h3 {
-	
 	color: inherit;
-	font: inherit;
 }
 body.notification .notification-header .right-menu .item.disabled {
 	color: var(--text-dimmest);
 }
-/* Patches - Quickadd */
-.normal_header.quickAdd-result-header { text-align: left; }
 /* Patches - Ownlist-Style */
 .ownlist_style_theme .customize-content-left .header .header-text {
-	
 	color: inherit;
 	font: inherit;
 }
@@ -679,30 +617,11 @@ body.notification .notification-header .right-menu .item.disabled {
 \*- - - - - - - - - - - - - - - */
 /* Recommendations Info Icon */
 .page-common .icon-about-recommendations {
-	
 	color: var(--accent);
-	
-	cursor: help;
 }
 .page-common .icon-about-recommendations:after {
-	right: auto;
-	top: -5px;
-	
-	padding: 5px 10px;
 	background: var(--content-dimmest);
-	
 	color: var(--text);
-	font: 1rem/13px var(--fontset-basic);
-	letter-spacing: 0;
-	text-transform: none;
-	
-	z-index: 5;
-}
-@media (max-width: 1629px) {
-	.page-common .quickadd-content .icon-about-recommendations.right:after {
-	
-		right: -300px;
-	}
 }
 /*------------------------------*\
   GENERIC @Sub-Headings
@@ -714,7 +633,6 @@ body.notification .notification-header .right-menu .item.disabled {
 }
 .profile .content-container .container-right h5 a {
 	color: var(--text-dim);
-	font: bold 0.9rem/13px var(--fontset-heading);
 }
 /*------------------------------*\
   GENERIC @Sidebar-Headings
@@ -736,9 +654,6 @@ body.notification .notification-header .right-menu .item.disabled {
 .page-common .hoverinfo:after {
 	border-color: var(--header-border) var(--header-border) transparent transparent;
 }
-.page-common .hoverinfo.left.top:after {
-	left: -20px;
-}
 .page-common .hovertitle { color: var(--text) !important }
 .page-common .hovertitle:hover { color: var(--text-heading) !important }
 .page-common .hoverinfo .dark_text { color: var(--text-dim); }
@@ -746,11 +661,9 @@ body.notification .notification-header .right-menu .item.disabled {
 #myanimelist a.button_add:not(.Lightbox_AddEdit), #myanimelist a.button_edit:not(.Lightbox_AddEdit),
 #myanimelist a.Lightbox_AddEdit[class*="button_"]:not(.btn-addEdit-large),
 .page-common .quickadd-content .btn-status-add {
-	padding: 0 5px;
 	background: var(--content-dim);
-	border: 2px solid var(--content-dim);
+	border-color: var(--content-dim);
 	color: var(--text-dim);
-	font: 0.9rem/16px var(--fontset-basic);
 	
 }
 #myanimelist a.button_add:not(.Lightbox_AddEdit):hover, #myanimelist a.button_edit:not(.Lightbox_AddEdit):hover,
@@ -785,29 +698,23 @@ body.notification .notification-header .right-menu .item.disabled {
 }
 /* Buttons - Large */
 #myanimelist a.Lightbox_AddEdit.btn-addEdit-large {
-	min-width: 70px;
-	height: 22px;
-	padding: 0 6px;
 	background: var(--content-dim);
-	border: 2px solid var(--border);
-	
+	border-color: var(--border);
 	color: var(--text);
-	font: 0.9rem/22px var(--fontset-basic);
 	
 }
 #myanimelist a.Lightbox_AddEdit.btn-addEdit-large:hover {
 	background: var(--border);
 	border-color: var(--border);
-	
 	color: var(--text-lnk-hov);
 }
 /*==============================*\
   !PAGE-TITLE
 \*==============================*/
 .page-common .h1 {
-    background: var(--header);
+	background: var(--header);
 	color: var(--text-heading) !important;
-    border-color: var(--border);
+	border-color: var(--border);
 }
 .page-common .h1 .title-english {
 	color: var(--text-dimmer);
@@ -818,300 +725,130 @@ body.notification .notification-header .right-menu .item.disabled {
 }
 /* User Banners (moderators, etc) */
 .icon-team-title {
-	padding: 3px 5px !important;
 	background-color: var(--content-dim);
-	border-radius: 2px;
-	margin-top: -15px;
-	margin-left: 7px;
-	
-	font: bold 1rem/14px var(--fontset-basic);
-	vertical-align: top;
-	
 }
 /* GENERIC @Breadcrumb */
-.page-common .breadcrumb {
-	top: 34px;
-	
-	padding: 1px 0;
-	background: linear-gradient(to right, var(--border), var(--content-dim));
-	margin: 0 !important;
-	
-}
-.page-common .breadcrumb div {
-	
-	vertical-align: top;
-}
 .page-common .breadcrumb ~ .breadcrumb div { float: right; }
 .page-common .breadcrumb div a {
-	
-	padding: 2px 10px 2px 22px;
 	background: var(--border);
-	
-	line-height: 17px;
-	
-}
-.page-common .breadcrumb ~ .breadcrumb div a { padding: 2px 22px 2px 10px; }
-.page-common .breadcrumb div a:hover { background: var(--accent-dimmest); }
-.page-common .breadcrumb div a:after {
-	
-	width: 17px;
-	height: 17px;
-	background: inherit;
-	box-shadow: 2px 2px 0 var(--accent);
-	
-	transform: rotate(-45deg);
-	transform-origin: right top;
-}
-.page-common .breadcrumb ~ .breadcrumb div a:after {
-	right: 100%;
-	box-shadow: -2px -2px 0 var(--accent);
-}
-.page-common .breadcrumb div a:hover:after { border-left-color: var(--accent-dimmest); }
-.page-common .breadcrumb div a[href*="forum/?clubid"] { font-size: 0; }
-.page-common .breadcrumb div a[href*="forum/?clubid"]:before {
-	content: "Club Forum";
-	
-}
-.page-common .breadcrumb div a[href="https://myanimelist.net/"]:before {
-	content: "Home";
-	
-}
-.page-common .breadcrumb div:nth-child(1) { z-index: 12; }
-.page-common .breadcrumb div:nth-child(2) { z-index: 11; }
-.page-common .breadcrumb div:nth-child(3) { z-index: 10; }
-.page-common .breadcrumb div:nth-child(4) { z-index: 9; }
-.page-common .breadcrumb div:nth-child(5) { z-index: 8; }
-.page-common .breadcrumb div:nth-child(6) { z-index: 7; }
-.page-common .breadcrumb div:nth-child(7) { z-index: 6; }
-.page-common .breadcrumb div:nth-child(8) { z-index: 5; }
-.page-common .breadcrumb div:nth-child(9) { z-index: 4; }
-.page-common .breadcrumb div:nth-child(10) { z-index: 3; }
-.page-common .breadcrumb div:nth-child(11) { z-index: 2; }
-.page-common .breadcrumb div:nth-child(12) { z-index: 1; }
-/* Patches - News */
-body.news .news-breadcrumbs {
-	width: initial;
-	min-height: initial;
 }
 /* GENERIC @Nav */
 .page-common #horiznav_nav {
-	border-bottom: 3px solid var(--border);
-	margin: 0 0 10px 0 !important;
-}
-.page-common #horiznav_nav ul {
-	display: inline-flex;
-	margin: 0;
-	flex-flow: row wrap;
+	border-color: var(--border);
 }
 .page-common #horiznav_nav ul li {
 	background: var(--content-dim) !important;
 }
 .page-common #horiznav_nav ul li a {
-	
-	padding: 0 7px;
 	background: var(--content-dim) !important;
-	margin: 0 5px 7px 0;
-	
 	color: var(--text-lnk) !important;
-	font: bold 1rem/26px var(--fontset-basic);
-	
 }
 .page-common #horiznav_nav ul li a:hover {
 	background: var(--border) !important;
-	
 	color: var(--text-lnk-hov) !important;
 }
 .page-common #horiznav_nav ul li .horiznav_active {
 	background: var(--accent-dim) !important;
-	
 	color: var(--text-heading) !important;
 }
 .page-common #horiznav_nav ul li .horiznav_active:hover {
 	background: var(--accent) !important;
-	
 	color: var(--text-heading) !important;
 }
 /* TEXT */
 /* Spoiler Expand & Quote Expand Buttons */
-#myanimelist .spoiler {
-	margin: 2px 0 0;
-} #myanimelist .spoiler + .spoiler {
-	margin-top: 4px;
-}
 #myanimelist .spoiler .button, #myanimelist .quotetext .button.expand_quote {
-	padding: 0 7px;
 	background: var(--content-dim) !important;
-	border: 1px solid var(--border);
+	border-color: var(--border);
 	color: var(--text-dim);
-	line-height: 18px;
 }
 #myanimelist .spoiler .button:hover, #myanimelist .quotetext .button.expand_quote:hover { border-color: var(--accent-dim) !important; }
 #myanimelist .spoiler > .spoiler_content[style*="ck"] > .button {
 	background: var(--border) !important;
 	border-color: var(--accent-dim) !important;
-	margin-bottom: 3px;
 }
 #myanimelist .spoiler > .spoiler_content[style*="ck"] > .button:hover { border-color: var(--accent) !important; }
-#myanimelist .spoiler > .spoiler_content {
-	padding-left: 2px;
-}
-#myanimelist .spoiler > .spoiler_content:before {
-	left: -5px;
-	width: 2px;
-	background: linear-gradient(to bottom, transparent, var(--accent-dim) 15px, var(--accent-dim) calc(100% - 15px), transparent);
-}
 #myanimelist .quotetext {
 	background: var(--quotebox-bg);
-	border: 1px solid var(--border);
-	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-	margin: 5px;
+	border-color: var(--border);
 }
 #myanimelist .news-list .comment-list .quotetext {
 	background: var(--quotebox-bg);
-	border: 1px solid var(--border);
-	
+	border-color: var(--border);
 	color: inherit;
 }
 #myanimelist .codetext {
-	max-width: 100%;
-    background: var(--codebox-bg);
-	border: 1px solid var(--border);
-	box-shadow: inset 0 0 4px rgba(0,0,0,.15);
-	margin: 0;
-    color: var(--codebox-text);
-}
-#myanimelist .codetext pre {
-	max-width: 100%;
-	overflow-x: auto;
-	overflow-y: visible;
-	font: 11px/15px var(--fontset-monospace);
+	background: var(--codebox-bg);
+	border-color: var(--border);
+	color: var(--codebox-text);
 }
 /*------------------------------*\
   CONTENT @Search-Bars
 \*------------------------------*/
-.anime-search-form-search {
-	margin: 30px auto;
-}
-#quickadd .quickadd-form-search {
-	max-width: 768px;
-	margin: 30px auto;
-}
 #quickadd input {
 	background-color: var(--content-dim);
 	border-color: var(--border);
 	color: var(--text);
-
-}
-.anime-search-form-search #q,
-#quickadd .quickadd-form-search #maSearchText {
-	width: calc(100% - 51px);
-	border-radius: 24px 0 0 24px;
-}
-#myanimelist .anime-search-form-search .inputButton,
-#quickadd .inputButton {
-	border-radius: 0 24px 24px 0;
-	padding-right: 14px;
-	height: 48px;
-	
-	font: 1.5rem "Font Awesome 6 Pro";
 }
 #quickadd .inputButton {
-	padding: 4px 14px 4px 10px;
 	background-color: var(--accent);
-	
 	color: var(--border);
-	font: bold 1rem/16px var(--fontset-basic);
-	
 }
 #quickadd .inputButton:not(:disabled):hover {
 	background: var(--accent-dim);
-	
 	color: var(--text-lnk-hov);
 }
 /* Search Results */
 .page-common #advancedSearchResultList {
-	top: 48px !important;
-	left: 24px !important;
-	right: 24px;
-	
 	background: var(--content-dim);
 	border-color: var(--border);
 }
 #advancedSearchResultList .list.focus { background: var(--border); }
-#advancedSearchResultList .list .image { border: 2px solid var(--border); }
+#advancedSearchResultList .list .image { border-color: var(--border); }
 #advancedSearchResultList .list .name { color: var(--text) !important; }
 #advancedSearchResultList .list .media-type { color: var(--text-dimmer) !important; }
 #advancedSearchResultList .list .extra-info { color: var(--text-dim) !important; }
 #advancedSearchResultList .list.separator {
 	background: var(--border);
-	
 }
 #advancedSearchResultList .list.separator span {
 	color: var(--text);
-	font: 1rem/13px var(--fontset-heading);
 }
 #advancedSearchResultList .list-bottom {
 	background: var(--content-dim) !important;
-	
 }
 #advancedSearchResultList .list-bottom.focus {
 	background: var(--accent) !important;
-	
 }
 #advancedSearchResultList .list.list-bottom a { color: var(--header-text); }
 #advancedSearchResultList .list.list-bottom.focus a { color: var(--header); }
 /* Advanced Search */
-#advancedSearch .mb24:last-of-type {
-	padding-bottom: 20px !important;
-	margin-bottom: 0px !important;
-}
-#advancedSearch select { width: 200px; }
-#advancedSearch #sd, #advancedSearch #sm, #advancedSearch #ed, #advancedSearch #em { width: 50px; }
-#advancedSearch [name="sy"], #advancedSearch [name="ey"] { width: 80px; }
 #advancedSearch .fw-b.mt24 {
-	border-bottom: 2px solid var(--border);
-	margin: 20px 0 7px !important;
-	
 	color: var(--text);
-	font: bold 1.1rem/13px var(--fontset-heading) !important;
 }
 #advancedSearch .fw-b.mt24 a {
-	float: right;
-	
 	color: var(--text-dim);
-	font: bold 0.9rem/13px var(--fontset-heading) !important;
 }
 /* ===============================================
 !GENERIC @News
 =============================================== */
 body.news .menu-category .btn-category.selected {
-    color: #7f7f7f !important;
-}
-.news-list .comment-list, .news-list .news-unit {
-	font-family: var(--fontset);
+	color: #7f7f7f !important;
 }
 .di-ib.tags *, .tag-cloud * {
 	background-color: transparent !important;
 }
 #myanimelist .news-list .tags .tags-inner-attributes {
 	border-color: var(--border);
-	margin-right: 7px;
 }
 #myanimelist .news-list .tags-inner .tag {
-	height: 18px;
-	padding: 0 5px;
 	background: var(--content-dim);
-	border: 1px solid var(--border);
-	margin: 0 5px 5px 0;
-	
+	border-color: var(--border);
 	color: var(--text);
-	
-	line-height: 18px;
 	
 }
 #myanimelist .news-list .tags-inner > .tag:hover {
 	background: var(--content-dimmer);
-	
 	color: var(--text-lnk-hov);
 }
 #myanimelist .news-list .tags .tag-color-feature-spoiler { border-color: var(--return-bad); }
@@ -1121,7 +858,7 @@ body.news .menu-category .btn-category.selected {
 .navi-seasonal.js-navi-company {
 	background-color: transparent !important;
 }
-    
+	
 /* ===============================================
 !GENERIC @Interest Stacks
 =============================================== */
@@ -1132,49 +869,43 @@ body.news .menu-category .btn-category.selected {
 	background-color: transparent !important;
 }
 .introduction, .any_status strong, .intro {
-    color: var(--text-heading) !important;
+	color: var(--text-heading) !important;
 }
 /* ===============================================
 !PROFILE
 =============================================== */
 .page-common .content-container .container-left {
-    border-color: var(--border);
+	border-color: var(--border);
 }
 .user-profile .user-status li {
-    background: transparent !important;
+	background: transparent !important;
 }
 .user-profile .user-status.border-top {
-    border-color: var(--border);
+	border-color: var(--border);
 }
 /* Profile Action Button */
 .user-profile .user-function .icon-user-function:not(.disabled) {
-    background-color: var(--content-dim);
-    border-color: var(--border);
+	background-color: var(--content-dim);
+	border-color: var(--border);
 }
 .user-profile .user-function .icon-user-function:not(.disabled) {
-    background-color: var(--content-dim);
-    border-color: var(--border);
+	background-color: var(--content-dim);
+	border-color: var(--border);
 }
 .user-profile .user-function .icon-user-function:not(.disabled):hover {
-    background-color: var(--content-dimmer);
+	background-color: var(--content-dimmer);
 }
 .user-profile .user-function .icon-user-function.disabled {
-    background-color: transparent !important;
-    border-color: var(--border);
+	background-color: transparent !important;
+	border-color: var(--border);
 }
 /* ===============================================
 !FORUM
 =============================================== */
-/* Header Thing */
-.page-forum .forum-table-header td { padding: 10px 0; }
 /* Browser */
 .page-common table.forum-topics tr td {
-    background-color: transparent !important;
-    border-color: var(--border);
-}
-.page-common table.forum-topics tr td h4 {
-	padding: 0 0 3px 0;
-	margin: 0;
+	background-color: transparent !important;
+	border-color: var(--border);
 }
 /* Posts */
 .page-forum .forum_postusername a,.page-forum .forum_postusername a:visited { color: var(--text-dim); }
@@ -1187,61 +918,33 @@ body.news .menu-category .btn-category.selected {
 }
 /* Icons */
 .js-toggle-watching-topic-button img {
-	width: 3px;
-	height: 3px;
-	padding: 2px;
 	background:rgba(var(--notif-rgb), 0.33) content-box;
-	border: 2px solid rgba(var(--notif-rgb), 0.33);
-	border-radius: 50% 0;
-	
-	object-position: 9999px;
-	transform: rotate(45deg);
+	border-color: rgba(var(--notif-rgb), 0.33);
 } .js-toggle-watching-topic-button img[title*="re wa"] {
 	background-color: var(--notif);
 	border-color: var(--notif);
 }
 .js-ignore-topic-button {
-	width: 12px;
-	height: 12px;
 	background: var(--border);
-	border-radius: 6px;
-	
-	line-height: 12px;
 }
 .js-ignore-topic-button:before {
-	width: 8px;
-	height: 2px;
 	background: var(--text-dim);
-	border-radius: 1px;
-	margin: 5px 2px;
 }
 /* ===============================================
 !NOTIFICATIONS
 =============================================== */
-body.notification #content {
-	padding-top: 44px !important;
-	min-height: 535px;
-}
 /* Left Column */
 body.notification #myanimelist #content .left-column {
-	padding-right: 7px;
-	border-right: 3px solid var(--border);
-}
-body.notification .notificaiton-category-nav {
-	min-height: auto;
+	border-color: var(--border);
 }
 body.notification .notificaiton-category-nav a {
 	color: var(--text-heading);
-	
 }
 body.notification .notificaiton-category-nav a .fa {
 	color: var(--icon);
 }
 body.notification .notificaiton-category-nav a:hover, body.notification .notificaiton-category-nav a.active {
 	background: var(--content-dim);
-}
-body.notification .notificaiton-category-nav li .fa-bell-o:before {
-	content: "\f0f3";
 }
 body.notification .notificaiton-category-nav a .counter.zero {
 	background: var(--border);
@@ -1251,80 +954,28 @@ body.notification .notificaiton-category-nav a .counter {
 	background: var(--accent);
 }
 /* Right Column */
-body.notification .notification-section {
-	margin-bottom: 30px;
-}
-body.notification .left-column + div {
-	padding-left: 7px;
-}
 body.notification .notification-item {
-	
-	border-bottom: 1px solid var(--border);
-	
-}
-body.notification .notification-item.empty {
-	font-size: 1.2rem;
-}
-body.notification .notification-item:hover { background: var(--content-dim); }
-body.notification #myanimelist .notification-item-layout {
-	padding: 5px;
-}
-body.notification .notification-item-layout > * {
-	padding: 0 5px;
-	
-}
-/* Text */
-body.notification #myanimelist .notification-item-layout .notification-item-content {
-	max-width: initial;
-	flex: 1 1 auto;
+	border-color: var(--border);
 }
 /* Time */
 body.notification .notification-item-layout .time {
 	color: var(--text-dimmest);
 }
-/* Checkmark */
-body.notification .notification-item-layout .is-read {
-	padding-left: 0;
-	margin: 0;
-}
 /* Unread */
 body.notification #myanimelist .notification-item-layout .fa {
-	margin: 2px 0;
-	
 	color: var(--text);
-	font-size: 1.3rem;
-	
 }
 /* Read */
 body.notification .notification-item-layout .is-read .fa-check-circle { background: var(--notif); }
-body.notification .notification-item-layout .is-read .fa-check-circle:before { content: "\f00c"; }
 body.notification .notification-item-layout .fa-check:hover { background: var(--border); }
 /*------------------------------*\
   BROWSE @Anime-Search
 \*------------------------------*/
 /*https://myanimelist.net/anime.php*/
 /*https://myanimelist.net/manga.php*/
-.anime-manga-search .normal_header { margin-top: 20px; }
 /* Browse Page */
-.anime-manga-search .genre-link .genre-list-col {
-	display: inline;
-}
-.anime-manga-search .genre-link .genre-list {
-	width: 16.6667%;
-	min-width: 206px;
-	
-}
 .anime-manga-search .genre-link .genre-list .genre-name-link {
-	height: 22px;
-/* 	padding: 0 0 0 16px; */
-	padding: 0 0 0 8px;
-/* 	background: var(--content-dim); */
-	border-left: 3px solid var(--border);
-/*  */
-	margin: 6px 6px 0;
-	
-	line-height: 22px;
-	
+	border-color: var(--border);
 }
 .anime-manga-search .genre-link .genre-list .genre-name-link:hover {
 	border-color: var(--accent);
@@ -1348,10 +999,10 @@ BROWSE @Top-Lists
 	background: var(--border);
 }
 #myanimelist [class$="-ranking-table"] .ranking-list:nth-of-type(even) td {
-    background: transparent;
+	background: transparent;
 }
 #myanimelist [class$="-ranking-table"] .ranking-list:nth-of-type(odd) td {
-    background: var(--content-dimmer);
+	background: var(--content-dimmer);
 }
 
 /* Manga store text */
@@ -1364,15 +1015,14 @@ BROWSE @Seasonal
 =============================================== */
 /* Header */
 .navi-seasonal {
-	width: 1040px;
 	background: var(--content);
 }
 .navi-seasonal .horiznav-nav-seasonal {
-    border-color: var(--border);
+	border-color: var(--border);
 }
 .season .seasonal-sort-order-block {
-    background: var(--content-dim);
-    border-color: var(--border);
+	background: var(--content-dim);
+	border-color: var(--border);
 }
 .navi-seasonal.fixed {
 	background: var(--border);
@@ -1385,7 +1035,7 @@ BROWSE @Seasonal
 .navi-seasonal .horiznav-nav-seasonal .btn-seasonal .btn-type
 {
 	background: transparent;
-    border-color: var(--border);
+	border-color: var(--border);
 	color: var(--text-dim);
 }
 /* Items */
@@ -1420,11 +1070,6 @@ BROWSE @Seasonal
 /* ===============================================
 BROWSE @Clubs
 =============================================== */
-/* Search Bar */
-#myanimelist .club-search-form-search .inputButton {
-	height: 50px;
-	border-radius: 0 50% 50% 0;
-}
 /* Text */
 .club-list .table-data td {
 	border: var(--border) !important;
@@ -1434,17 +1079,13 @@ BROWSE @Clubs
 }
 /* Join Button */
 #myanimelist .club-list .btn-club-join {
-	min-width: 30px;
-	padding: 4px 10px;
 	background-color: var(--accent);
 	background-color: var(--border);
-	
 	color: var(--text);
 	
 }
 #myanimelist .club-list .btn-club-join:hover {
 	background: var(--accent-dimmest);
-	
 	color: var(--text-lnk-hov);
 }
 /* New Comment */
@@ -1457,47 +1098,28 @@ BROWSE @Clubs
 #fancybox-overlay {
 	background: black !important;
 }
-#fancybox-wrap {
-	left: 50% !important;
-	margin-top: 25% !important;
-	
-	min-width: 500px;
-	min-height: 350px;
-	
-	transform: translate(-50%,-50%);
-}
 #fancybox-outer {
-	min-width: 500px;
-	min-height: 350px;
 	background: var(--border);
 }
 #fancybox-inner {
-	height: 100% !important;
 	color: var(--text);
 }
 #fancybox-inner div {
-    background: black !important;
-	font: 1rem/1.5 var(--fontset-basic) !important;
-}
-#fancybox-title {
-	left: 0 !important;
+	background: black !important;
 }
 /* MODALS */
 .root * { border-color: var(--border) !important; }
 .root .modal-mask { background-color: rgba(0,0,0,0.7) }
 .root .modal-content {
 	background: var(--header);
-	border-top: 2px solid var(--border);
+	border-color: var(--border);
 }
 .root .modal-container {
 	border-color: var(--accent) !important;
 	color: var(--text);
-	
 }
 .root button {
 	background: var(--accent);
-	border-radius: 12px;
 	color: var(--border);
-	
 }
 .root button:hover { color: var(--text-lnk-hov); }
